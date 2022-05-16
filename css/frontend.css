@@ -1,0 +1,130 @@
+body{
+    background-color: #121212;
+}
+
+hr{
+        height: 1px;
+        background-color: #b4def3;
+        border: none;
+}
+
+a{
+    color: #fabfc5;
+}
+a:hover{
+    color: white;
+}
+
+header{
+    font-weight: bold;
+}
+
+.titulos{
+    color: #fabfc5;
+}
+
+.btn{
+    color: #fffab0;
+    background-color: #db8890;
+    border-color: white;
+}
+.btn:hover{
+    background-color: #fffab0;
+    color: #db8890;
+    border-color: white;
+}
+.btn:focus{
+    background-color: white;
+    color: #b4def3;
+}
+
+.separador{
+    background-color: #1d1d1d;
+}
+
+.tarjeta_contenido{
+    background-color: #202020;
+    border-color: #202020;
+}
+
+.carruselo{
+    /*padding-left:30px; padding-right:30px;*/
+}
+
+.caja{
+    position: relative;
+    display: inline-block;
+}
+
+.oferta{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+    background-color: red;
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.dropdown-item{
+    background-color: #494949;
+    color: #fabfc5;
+}
+
+.dropdown-item:hover{
+    background-color: #494949;
+    color: #b4def3;
+}
+
+.dropdown-item:focus{
+    color: white;
+    background-color: #b4def3;
+}
+
+.dropdown-menu{
+    background-color: #494949;
+}
+
+.fas{
+    color: #fffab0;
+}
+
+.verde{
+    background-color: #b4f3b8;
+    color: black;
+}
+.verde:hover{
+    background-color: #83f48a;
+    color: #38f944;
+}
+.verde:focus{
+    background-color: #00ff12;
+    color: white;
+}
+
+.amarillo{
+    background-color: #ebf3b4;
+    color: black;
+}
+.amarillo:hover{
+    color: #deff00;
+    background-color: #e0f266;
+}
+.amarillo:focus{
+    background-color: #deff00;
+    color: white;
+}
+
+.azul{
+    background-color: #8babda;
+    color: black;
+}
+.azul:hover{
+    color: #8babda;
+    background-color: #4582db;
+}
+.azul:focus{
+    background-color: #035bdc;
+    color: white;
+}

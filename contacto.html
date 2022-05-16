@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="css/tool.css" rel="stylesheet" type="text/css"/>
+        <link href="css/frontend.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+        <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+          width: 100%;
+          height: 100%;
+        }
+        </style>
+    </head>
+    
+    <body class="text-light">
+        <!-- Header -->
+        <header>
+            <nav class="navbar smart-scroll navbar-expand-lg navbar-dark" style="background-color:#8babda;">
+                <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorías </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="main_nav">
+                  <a class="navbar-brand" href="index.html">
+                        <img src="img/logo_white.png" alt="Logo" style="width:80px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div> <!-- Colapso de navbar// -->
+                
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" id="Usuario">
+                            
+                        </li>
+                    </ul>
+                </div>
+              </nav>
+        </header>
+        
+        <hr style="margin-top: 150px;">
+        <!-- Formulario de contacto -->
+        
+        <section>
+            <div class="container-sm p-3 my-3 border rounded">
+                <h2 class="h1-responsive font-weight-bold text-center my-4">¡Contáctanos!</h2>
+                <p class="text-center w-responsive mx-auto mb-5">¿Tuviste algún inconveniente con tu compra, o alguna sugerencia para nosotros? Puedes
+                enviarnos un correo a nuestro contacto directo, solo llena el formulario y nosotros haremos todo lo posible para ofrecerte un mejor
+                servicio.</p>
+                
+                <form class="/action_page.php">
+                    <!-- Formulario -->
+                    <div class="container-fluid" style="padding-left: 80px; padding-right: 80px;">
+                        <!--Nombre y email -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control bg-dark text-light">
+                                    <label for="name" class="">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control bg-dark text-light">
+                                    <label for="email" class="">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Asunto a tratar -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="subject" name="subject" class="form-control bg-dark text-light">
+                                    <label for="subject" class="">Asunto a tratar</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mensaje -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea bg-dark text-light"></textarea>
+                                    <label for="message">Mensaje</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Boton de enviar -->
+                        <div class="text-center text-md-left">
+                            <a class="btn btn-primary">Envíar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!--Mapa -->
+            <div class="container-sm p-3 my-3 border rounded">
+                <h2 class="h1-responsive font-weight-bold text-center my-4">¡Visitanos!</h2>
+                <p class="text-center w-responsive mx-auto mb-5">Te presentamos un mapa con todas nuestras sucursales disponibles
+                siempre para ti.</p>
+                <div>
+                    <select class="form-control" id="mapa_sel" onchange="actualizarMapa()">
+                        <optgroup label="Sucursales en Leon">
+                        <option value="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Blvd.%20Adolfo%20L%C3%B3pez%20Mateos%202518,%20Jardines%20de%20Jerez,%2037530%20Le%C3%B3n,%20Gto.,%20M%C3%A9xico+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Sucursal Leon Gto. 1</option>
+                        <option value="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Blvd.%20Juan%20Alonso%20de%20Torres%20Pte.%202002,%20Valle%20del%20Campestre,%2037150%20Le%C3%B3n,%20Gto.,%20M%C3%A9xico+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Sucursal Leon Gto. 2</option>
+                        <option value="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Blvd.%20Aeropuerto%20No.%20104,%20Cerrito%20de%20Jerez,%2037530%20Le%C3%B3n,%20Gto.,%20M%C3%A9xico+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Sucursal Leon Gto. 3</option>
+                        <optgroup label="Sucursales en Zamora">
+                        <option value="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Carr%20Zamora-La%20Barca,%20Zamora%20de%20Hidalgo,%20Mich.,%20M%C3%A9xico+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Sucursal Zamora Mich. 1</option>
+                    </select>
+                </div>
+                <br/>
+                <!--Google map-->
+                        <div style="width: 100%">
+                            <iframe width="100%" height="600" frameborder="0" scrolling="no" id="mapa" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Blvd.%20Adolfo%20L%C3%B3pez%20Mateos%202518,%20Jardines%20de%20Jerez,%2037530%20Le%C3%B3n,%20Gto.,%20M%C3%A9xico+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                            </iframe>
+                        </div>
+                <!--Google Maps-->
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="page-footer font-small stylish-color-dark pt-4 text-light">
+        <!-- Registrarse -->
+          <hr>
+          <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+              <h5 class="mb-1">Regístrate ahora</h5>
+            </li>
+            <li class="list-inline-item">
+                <a href="sesion.html" class="btn btn-info">Registrar</a>
+            </li>
+          </ul>
+          <!-- Registrarse -->
+          <hr>
+          <!-- Links -->
+          <div class="container text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-4 mx-auto">
+                <!-- Contenido -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Nosotros</h5>
+                <p>Somos una empresa de calzado destinado a ofrecer la mayor cantidad de 
+                comodidad y satisfacción posible para nuestros clientes, brindando un servicio de la mano
+                del respeto y la comprensión por las necesidades del cliente.</p>
+              </div>
+              <!-- Grid column -->
+              <hr class="clearfix w-100 d-md-none">
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Compra</h5>
+                <ul class="list-unstyled">
+                    <li>
+                      <a href="#!">Como Comprar</a>
+                    </li>
+                    <li>
+                      <a href="#!">Preguntas Frecuentes</a>
+                    </li>
+                    <li>
+                      <a href="#!">Guía de tallas</a>
+                    </li>
+                    <li>
+                    <a href="#!">Reportar pago</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Grid column -->
+              <hr class="clearfix w-100 d-md-none">
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Explora</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">Nosotros</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Grid column -->
+              <hr class="clearfix w-100 d-md-none">
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Servicios</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">Devoluciones</a>
+                  </li>
+                  <li>
+                    <a href="#!">Políticas legales</a>
+                  </li>
+                  <li>
+                    <a href="#!">Contáctanos</a>
+                  </li>
+                  <li>
+                    <a href="#!">Solicita tu factura</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+          <!-- Links -->
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://elsapato.com"> Elsapato.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <script src="js/frontEnd.js" type="text/javascript"></script>
+        <script src="js/tool.js" type="text/javascript"></script>
+    </body>
+</html>

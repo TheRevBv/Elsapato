@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="../css/adminview.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Sidenav -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link " href="menu.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="background-color:#28A4B4; color: aquamarine" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="categorias.html">Categorías</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="subc.html">Subcategorías</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="usuarios.html">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ventas.html">Ventas</a>
+                </li>
+            </ul>
+        </div>
+        <div id="main"> <!-- Todo el contenido aqui -->
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            
+            <header>
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#28A4B4;">
+                    <!-- Texto -->
+                    <a class="navbar-brand mr-auto" href="menu.html">Panel de Administración</a>
+                    <!-- boton de perfil -->
+                    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <li class="nav-item dropdown dropleft mr-auto ">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                        <img id="lowPP" alt="Logo" style="width:40px;"/>
+                                    </a>
+                                    <div class="dropdown-menu" style="padding: 5px;">
+                                      <div class="card" style="width:200px">
+                                            <img class="card-img-top" id="PP" alt="Card image">
+                                            <div class="card-body">
+                                              <h4 class="card-title text-center" id="pestUs">Usuario</h4>
+                                              <p class="card-text text-center" id="pestRan">Rango</p>
+                                              <a type="button" class="dropdown-item btn" onclick="cerrarSesion()">cerrar sesión</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </nav>
+            </header>
+            
+            <br/>
+            <!-- Titulo -->
+            <h1>Productos</h1>
+            <hr/>
+            <br/>
+            
+            <!-- Tabla -->
+            <div class="container-fluid">
+                <h2>Lista de productos</h2>
+                <p>Para agregar un nuevo producto solo rellene el espacio inferior</p>         
+                <!--buscador-->
+                <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" id="buscador_productos" type="text" placeholder="Buscar Productos">
+                      <button class="btn btn-info" type="button" onclick="buscarProductos()" style="background-color:#28A4B4"><i class="fas fa-search" style="font-size:25px;"></i></button>
+                    </form>
+                </nav>
+                <!--buscador-->
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Img</th>
+                      <th>Nombre del producto</th>
+                      <th>Descripción</th>
+                      <th>Categoría</th>
+                      <th>Subcategoría</th>
+                      <th>Precio</th>
+                      <th>Oferta</th>
+                      <th>  </th>
+                    </tr>
+                  </thead>
+                  <tbody id="prod_body">
+                    
+                  </tbody>
+                  <tfoot>
+                      <tr>
+                          <td><select class="form-control" id="prod_img">
+                                <optgroup label="Zapatos">
+                                    <option value="img/zapato/1.png">Zapato 1</option>
+                                    <option value="img/zapato/2.png">Zapato 2</option>
+                                    <option value="img/zapato/3.png">Zapato 3</option>
+                                    <option value="img/zapato/4.png">Zapato 4</option>
+                                    <option value="img/zapato/5.png">Zapato 5</option>
+                                <optgroup label="Botas">
+                                    <option value="img/bota/1.png">Bota 1</option>
+                                    <option value="img/bota/2.png">Bota 2</option>
+                                    <option value="img/bota/3.png">Bota 3</option>
+                                    <option value="img/bota/4.png">Bota 4</option>
+                                    <option value="img/bota/5.png">Bota 5</option>
+                                <optgroup label="Pantunflas">
+                                    <option value="img/pantunfla/1.png">Pantunfla 1</option>
+                                    <option value="img/pantunfla/2.png">Pantunfla 2</option>
+                                    <option value="img/pantunfla/3.png">Pantunfla 3</option>
+                                    <option value="img/pantunfla/4.png">Pantunfla 4</option>
+                                    <option value="img/pantunfla/5.png">Pantunfla 5</option>
+                              </select></td>
+                        <td><input type="text" class="form-control" id="prod_name" placeholder="Ingresa el nombre del producto"></td>
+                        <td><textarea type="textarea" class="form-control" id="prod_des" placeholder="Ingresa la descripcion del producto"></textarea></td>
+                        <td><select class="form-control" id="prod_cat" onchange="filtrarSubcategorias()"></select></td>
+                        <td><select class="form-control" id="prod_subcat"></select></td>
+                        <td><input type="number" class="form-control" placeholder="$00.00" id="prod_pr"></td>
+                         <td><input type="number" class="form-control" placeholder="Inserte descuento" id="prod_dsc"></td>
+                        <td><button type="button" class="btn btn-info" onclick="agregarProductos()"><i class="fas fa-plus"></i></button></td>
+                    </tr>
+                  </tfoot>
+                </table>
+            </div>
+        </div>
+        <script src="../js/adminviewtool.js" type="text/javascript"></script>
+        <script src="../js/backend.js" type="text/javascript"></script>
+    </body>
+</html>
